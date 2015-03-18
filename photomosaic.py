@@ -6,6 +6,10 @@ import sys
 
 # This script pre-align photos and search controlpoints on a set of ordered photo
 # taken for example from a UAV.
+# The Hugin default strategy looks for keypoints matching each pair of images also 
+# not adjacent and it is very computational expensive for an high number images. 
+# So the algorithm was modified in order to pre-align the images and to detect 
+# keypoints only in overlapping images. 
 
 #  UAV Fotografic Path          X(row,col) = Photomosaic reference
 #       ___     ___             Tot(row,col) = Total number of rows and cols
